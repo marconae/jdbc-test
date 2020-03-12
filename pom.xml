@@ -42,16 +42,28 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>maven.exasol.com</id>
+            <url>https://maven.exasol.com/artifactory/exasol-releases</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>maven.exasol.com-snapshots</id>
+            <url>https://maven.exasol.com/artifactory/exasol-snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
             <groupId>com.exasol</groupId>
             <artifactId>exasol-jdbc</artifactId>
-            <!-- <version>6.2.3</version> -->
-            <!-- <version>6.0.7</version> -->
-
-            <version>6.1.2</version>
-
+            <version>6.2.3</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -88,6 +100,6 @@
             <artifactId>mockito-junit-jupiter</artifactId>
             <version>${mockito.version}</version>
             <scope>test</scope>
-        </dependency>        
+        </dependency>
     </dependencies>
 </project>
